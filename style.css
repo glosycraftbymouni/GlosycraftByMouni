@@ -114,3 +114,19 @@ footer {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   border: 3px solid white;
 }
+.site-header {
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.site-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.brand-name {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
