@@ -60,4 +60,26 @@ footer {
     text-align: center;
     padding: 15px;
     margin-top: 30px;
+
+}
+.page-header {
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.hampers-page {
+  padding: 20px;
+}
+
+.hamper-box {
+  background: #f8eaea;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.whatsapp-btn {
+  display: block;
+  text-align: center;
+  margin: 30px auto;
 }
