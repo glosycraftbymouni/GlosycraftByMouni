@@ -277,3 +277,8 @@ footer {
   height: 230px;
   object-fit: cover;
 }
+.free-gift {
+  color: #e91e63;
+  font-weight: bold;
+}
+
