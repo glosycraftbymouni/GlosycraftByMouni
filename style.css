@@ -214,3 +214,49 @@ footer {
   border-radius: 20px;
   font-size: 14px;
 }
+/* Hamper Details Page */
+
+.details-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.details-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.details-card img {
+  max-width: 100%;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.details-card h2 {
+  color: #e75480;
+  margin-bottom: 12px;
+}
+
+.details-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px;
+}
+
+.details-card ul li {
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.price {
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.whatsapp {
+  background: #25d366;
+}
