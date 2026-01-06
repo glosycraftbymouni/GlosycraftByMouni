@@ -311,5 +311,28 @@ footer {
 .about-us p {
   color: #551A8B;
 }
+/* Common page title */
+.page-title {
+  text-align: center;
+  color: #e75480;
+  margin-bottom: 15px;
+  font-size: 26px;
+}
+
+/* Pink button */
+.pink-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #e75480;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.pink-btn:hover {
+  opacity: 0.9;
+}
 
 
