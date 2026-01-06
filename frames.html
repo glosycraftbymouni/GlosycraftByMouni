@@ -6,44 +6,61 @@
 </head>
 <body>
 
-<h1>Resin Photo Frames</h1>
+<!-- PINK HEADING -->
+<h1 class="page-title">Resin Photo Frames</h1>
+
+<!-- Back button (simple link okay) -->
 <a href="index.html">⬅ Back to Home</a>
 
 <hr>
-<ul>
-  <li>4 inch Frame</li>
- <p>📸 Photo will be uploaded here</p>
-  <li>6 inch Resin Frame</li>
-  <div class="product-images">
-   <img src="images/6inch-frame-1.jpeg" alt="6 inch Resin frame"
-     onclick="openPopup(this.src)">
-    <img src="images/6inch-frame-1.1.jpeg" alt="6 inch Resin frame"
-      onclick="openPopup(this.src)">
- </div>
-  <li>8 inch Resin Frame</li>
-  <p>📸 Photo will be uploaded here</p>
-  <li>12 x 9 Rectangular Resin Frame</li>
-  <p>📸 Photo will be uploaded here</p>
-  <li>Heart Shape Resin Photo Frame</li>
-  <p>📸 Photo will be uploaded here</p>
-</ul>
 
-<p><b>Customization:</b> Photo + Name + Date</p>
+<div class="frames-section">
+  <ul>
+    <li>4 inch Frame</li>
+    <p>📸 Photo will be uploaded here</p>
 
-<a href="https://wa.me/919110536348">Order on WhatsApp</a>
+    <li>6 inch Resin Frame</li>
+    <div class="product-images">
+      <img src="images/6inch-frame-1.jpeg" alt="6 inch Resin frame"
+        onclick="openPopup(this.src)">
+      <img src="images/6inch-frame-1.1.jpeg" alt="6 inch Resin frame"
+        onclick="openPopup(this.src)">
+    </div>
+
+    <li>8 inch Resin Frame</li>
+    <p>📸 Photo will be uploaded here</p>
+
+    <li>12 x 9 Rectangular Resin Frame</li>
+    <p>📸 Photo will be uploaded here</p>
+
+    <li>Heart Shape Resin Photo Frame</li>
+    <p>📸 Photo will be uploaded here</p>
+  </ul>
+
+  <p><b>Customization:</b> Photo + Name + Date</p>
+
+  <!-- PINK WHATSAPP BUTTON -->
+  <a href="https://wa.me/919110536348" class="pink-btn">
+    Order on WhatsApp
+  </a>
+</div>
+
+<!-- IMAGE POPUP -->
 <div id="imagePopup" class="popup" onclick="closePopup()">
   <span class="close">&times;</span>
   <img id="popupImg">
 </div>
-  <script>
-  function openPopup(src) {
-    document.getElementById("popupImg").src = src;
-    document.getElementById("imagePopup").style.display = "block";
-  }
 
-  function closePopup() {
-    document.getElementById("imagePopup").style.display = "none";
-  }
-  </script>
+<script>
+function openPopup(src) {
+  document.getElementById("popupImg").src = src;
+  document.getElementById("imagePopup").style.display = "block";
+}
+
+function closePopup() {
+  document.getElementById("imagePopup").style.display = "none";
+}
+</script>
+
 </body>
 </html>
