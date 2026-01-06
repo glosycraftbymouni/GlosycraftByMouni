@@ -33,6 +33,19 @@
 <p><b>Customization:</b> Photo + Name + Date</p>
 
 <a href="https://wa.me/919110536348">Order on WhatsApp</a>
+<div id="imagePopup" class="popup" onclick="closePopup()">
+  <span class="close">&times;</span>
+  <img id="popupImg">
+</div>
+  <script>
+  function openPopup(src) {
+    document.getElementById("popupImg").src = src;
+    document.getElementById("imagePopup").style.display = "block";
+  }
 
+  function closePopup() {
+    document.getElementById("imagePopup").style.display = "none";
+  }
+  </script>
 </body>
 </html>
