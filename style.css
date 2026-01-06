@@ -619,6 +619,19 @@ footer {
 .pink-btn:hover {
   opacity: 0.9;
 }
+ul {
+  padding-left: 25px;
+}
+.back-home a {
+  color: #e75480;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back-home a:hover {
+  text-decoration: underline;
+}
+
 
 
 
