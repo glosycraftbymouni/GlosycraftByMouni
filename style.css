@@ -631,6 +631,33 @@ ul {
 .back-home a:hover {
   text-decoration: underline;
 }
+/* OUR PRODUCTS – OLD STYLE LIST */
+.product-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.product-list li {
+  background: #f1f1f1;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.product-list li a {
+  display: block;
+  padding: 12px 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* hover effect (desktop) */
+.product-list li a:hover {
+  background: #e6e6e6;
+  color: #000;
+}
 
 
 
