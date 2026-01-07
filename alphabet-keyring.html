@@ -7,56 +7,80 @@
 </head>
 <body>
 
-  <section class="page-header">
-    <h1>Alphabet Keyring Combo</h1>
-    <section class="product-images">
-  <img src="images/alphabet-keyring-1.png" alt="Alphabet Keyring Combo" onclick="openImage(this.src)">
-  <img src="images/alphabet-keyring-2.jpg" alt="Alphabet Beads Keyring" onclick="openImage(this.src)">
-  <img src="images/alphabet-keyring-3.jpg" alt="Alphabet Name Keychain Combo" onclick="openImage(this.src)">
-      <img src="images/alphabet-keyring-4.jpeg" alt="Alphabet Keyring Combo" onclick="openImage(this.src)">
-  <img src="images/alphabet-keyring-5.jpeg" alt="Alphabet Beads Keyring" onclick="openImage(this.src)">
-  <img src="images/alphabet-keyring-6.jpeg" alt="Alphabet Name Keychain Combo" onclick="openImage(this.src)">
-    </section>
+<section class="page-header">
+  <h1>Alphabet Keyring Combo</h1>
+
+  <!-- IMAGE SLIDER + THUMBNAILS -->
+  <section class="product-gallery">
+
+    <!-- MAIN IMAGE -->
+    <div class="main-image">
+      <img id="currentImage"
+           src="images/alphabet-keyring-1.png"
+           alt="Alphabet Keyring Combo"
+           onclick="openImage(this.src)">
+    </div>
+
+    <!-- THUMBNAILS -->
+    <div class="thumbnail-row">
+      <img src="images/alphabet-keyring-1.png" onclick="changeImage(this)">
+      <img src="images/alphabet-keyring-2.jpg" onclick="changeImage(this)">
+      <img src="images/alphabet-keyring-3.jpg" onclick="changeImage(this)">
+      <img src="images/alphabet-keyring-4.jpeg" onclick="changeImage(this)">
+      <img src="images/alphabet-keyring-5.jpeg" onclick="changeImage(this)">
+      <img src="images/alphabet-keyring-6.jpeg" onclick="changeImage(this)">
+    </div>
+
   </section>
+</section>
+
+<!-- POPUP -->
 <div id="imagePopup" class="popup">
   <span class="close" onclick="closeImage()">×</span>
   <img id="popupImg">
 </div>
-  <section class="details-container">
 
-    <div class="details-card">
-     <!-- <img src="images/alphabet-keyring.jpg" alt="Alphabet Keyring Combo">-->
+<section class="details-container">
+  <div class="details-card">
 
-      <h2>What’s Inside This Combo</h2>
-<ul>
-  <li>2 Alphabet Keychains</li>
-  <li>Preferred colour customization (customer choice)</li>
-  <li><span class="free-gift">🎁 FREE Feather Bookmark</span></li>
-</ul>
+    <h2>What’s Inside This Combo</h2>
+    <ul>
+      <li>2 Alphabet Keychains</li>
+      <li>Preferred colour customization (customer choice)</li>
+      <li><span class="free-gift">🎁 FREE Feather Bookmark</span></li>
+    </ul>
 
-<p><strong></strong>Price: ₹349(Includes FREE Bookmark)</p>
+    <p><strong>Price:</strong> ₹349 (Includes FREE Bookmark)</p>
 
-      <a
-        href="https://wa.me/919110536348?text=Hi%20I%20want%20to%20order%20Alphabet%20Keyring%20Combo"
-        class="btn whatsapp"
-        target="_blank">
-        Order on WhatsApp
-      </a>
-    </div>
+    <a
+      href="https://wa.me/919110536348?text=Hi%20I%20want%20to%20order%20Alphabet%20Keyring%20Combo"
+      class="btn whatsapp"
+      target="_blank">
+      Order on WhatsApp
+    </a>
 
-  </section>
-  <div class="back-home">
-    <a href="hampers.html" class="btn">← Back to Hampers</a>
   </div>
+</section>
+
+<div class="back-home">
+  <a href="hampers.html" class="btn">← Back to Hampers</a>
+</div>
+
+<!-- JS -->
 <script>
+function changeImage(el) {
+  document.getElementById("currentImage").src = el.src;
+}
+
 function openImage(src) {
   document.getElementById("popupImg").src = src;
-  document.getElementById("imagePopup").style.display = "block";
+  document.getElementById("imagePopup").style.display = "flex";
 }
 
 function closeImage() {
   document.getElementById("imagePopup").style.display = "none";
 }
 </script>
+
 </body>
 </html>
