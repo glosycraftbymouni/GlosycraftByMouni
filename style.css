@@ -324,3 +324,16 @@ footer {
   object-fit: cover;     /* Crop chesi same size look istundi */
   border-radius: 12px;
 }
+.product-images {
+  display: flex;
+  gap: 15px;
+}
+
+.product-images img {
+  width: 220px;      /* same width */
+  height: 220px;     /* same height */
+  object-fit: cover; /* crop, no stretch */
+  border-radius: 12px;
+  cursor: pointer;
+}
+
