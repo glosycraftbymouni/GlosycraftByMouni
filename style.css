@@ -434,16 +434,22 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
-  padding: 20px;
+  padding: 12px;
+}
+.hampers-grid img{
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
 }
 
 /* Mobile */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .hampers-grid {
     grid-template-columns: 1fr;
     padding-bottom: 0;
   }
-}
+}  */
+
 
 
 
