@@ -336,6 +336,21 @@ footer {
   object-fit: cover;     /* Crop chesi same size look istundi */
   border-radius: 12px;
 }
+.photo-scroll{
+    display: flex;
+    gap: 15px;
+    overflow-x:auto;
+    padding: 15px;
+    scroll-snap-type: x mandatory;
+}
+.photo-scroll img{
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+}
 
 
 
