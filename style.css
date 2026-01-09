@@ -449,10 +449,12 @@ footer {
     padding-bottom: 0;
   }
 }  */
-.hamper-grid {
+.hamper-page .hamper-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
+  padding: 12px
+ margin: 0;
 }
 
 .hamper-card {
@@ -461,10 +463,12 @@ footer {
 
 /* phone fix */
 @media (max-width: 500px) {
-  .hamper-grid {
+ .hamper-page .hamper-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+       gap: 14px;
   }
 }
+
 
 
 
