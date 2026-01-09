@@ -337,7 +337,7 @@ footer {
   border-radius: 12px;
 }
 /* added on 9th jan for image scroll for alphabe-keyring.html at 3pm */
-.main-image {
+/*.main-image {
   width: 100%;
   max-height: 320px;
   object-fit: contain;
@@ -373,7 +373,36 @@ footer {
   padding: 4px 10px;
   cursor: pointer;
   border-radius: 50%;
+}  */
+/*added at jan9th 3:21pm */
+.big-img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  border-radius: 10px;
 }
+
+.thumb-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.thumbs {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+}
+
+.thumbs img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 
 
 
