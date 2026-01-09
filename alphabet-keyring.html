@@ -9,14 +9,30 @@
 
   <div class="page-header">
     <h1>Alphabet Keyring Combo</h1>
-    <section class="photo-scroll">
-  <img src="images/alphabet-keyring-1.png" alt="Alphabet Keyring Combo" onclick="openImage(this.src)">
-  <img src="images/alphabet-keyring-2.jpg" alt="Alphabet Beads Keyring" onclick="openImage(this.src)">
-  <img src="images/alphabet-keyring-3.jpg" alt="Alphabet Name Keychain Combo" onclick="openImage(this.src)">
-      <img src="images/alphabet-keyring-4.jpeg" alt="Alphabet Keyring Combo" onclick="openImage(this.src)">
-  <img src="images/alphabet-keyring-5.jpeg" alt="Alphabet Beads Keyring" onclick="openImage(this.src)">
-  <img src="images/alphabet-keyring-6.jpeg" alt="Alphabet Name Keychain Combo" onclick="openImage(this.src)">
-    </section>
+    <div class="product-gallery">
+
+  <!-- Main Image -->
+  <div class="main-image">
+    <img id="mainPreview" src="images/alphabet-keyring-1.png">
+  </div>
+
+  <!-- Thumbnail strip -->
+  <div class="thumb-wrapper">
+    <button class="arrow left" onclick="manualScroll(-1)">‹</button>
+
+    <div class="thumb-scroll" id="thumbScroll">
+      <img src="images/alphabet-keyring-1.png" onclick="changeImage(this)">
+      <img src="images/alphabet-keyring-2.jpg" onclick="changeImage(this)">
+      <img src="images/alphabet-keyring-3.jpg" onclick="changeImage(this)">
+      <img src="images/alphabet-keyring-4.jpg" onclick="changeImage(this)">
+      <img src="images/alphabet-keyring-5.jpg" onclick="changeImage(this)">
+      <img src="images/alphabet-keyring-6.jpeg" onclick="changeImage(this)">
+    </div>
+
+    <button class="arrow right" onclick="manualScroll(1)">›</button>
+  </div>
+
+</div>
   </div>
 <div id="imagePopup" class="popup">
   <span class="close" onclick="closeImage()">×</span>
@@ -57,6 +73,48 @@ function openImage(src) {
 function closeImage() {
   document.getElementById("imagePopup").style.display = "none";
 }
+</script>
+  <script>
+let autoScrollInterval;
+let currentIndex = 0;
+
+const images = document.querySelectorAll("#thumbScroll img");
+const mainImage = document.getElementById("mainPreview");
+const thumbScroll = document.getElementById("thumbScroll");
+
+// change main image
+function changeImage(img) {
+  stopAutoScroll();
+  mainImage.src = img.src;
+}
+
+// auto scroll logic
+function startAutoScroll() {
+  autoScrollInterval = setInterval(() => {
+    currentIndex = (currentIndex + 1) % images.length;
+    mainImage.src = images[currentIndex].src;
+    images[currentIndex].scrollIntoView({
+      behavior: "smooth",
+      inline: "center"
+    });
+  }, 2000);
+}
+
+// manual scroll (arrow)
+function manualScroll(direction) {
+  stopAutoScroll();
+  thumbScroll.scrollLeft += direction * 120;
+}
+
+// stop auto scroll when user interacts
+function stopAutoScroll() {
+  clearInterval(autoScrollInterval);
+}
+
+// start auto scroll when page loads
+window.onload = () => {
+  startAutoScroll();
+};
 </script>
 </body>
       </html>
