@@ -465,9 +465,9 @@ footer {
 @media (max-width: 500px) {
  .hamper-page .hamper-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-       gap: 14px;
   }
 }
+
 
 
 
