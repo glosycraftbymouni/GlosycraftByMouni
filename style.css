@@ -265,7 +265,7 @@ footer {
 }
 @media (max-width: 500px) {
   .hamper-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 /* ===== IMAGE POPUP FULLSCREEN (CSS ONLY, SAFE) ===== */
@@ -295,4 +295,5 @@ footer {
   cursor: pointer;
   font-weight: bold;
 }
+
 
