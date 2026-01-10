@@ -258,7 +258,7 @@ footer {
 .hamper-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+  gap: 22px;
 }
 .hamper-card {
   width: 100%;
@@ -295,6 +295,7 @@ footer {
   cursor: pointer;
   font-weight: bold;
 }
+
 
 
 
