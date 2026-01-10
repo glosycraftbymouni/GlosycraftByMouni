@@ -378,6 +378,45 @@ footer {
   background: #d6a6b8;
   border-radius: 10px;
 }
+/* ===== Frames arrows scroll ===== */
+
+.frames-page .frame-scroll-wrapper {
+  position: relative;
+}
+
+.frames-page .scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 182, 193, 0.9);
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  padding: 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.frames-page .scroll-btn.left {
+  left: 5px;
+}
+
+.frames-page .scroll-btn.right {
+  right: 5px;
+}
+
+.frames-page .scroll-btn:hover {
+  background: #ff6f91;
+}
+
+/* hide arrows on small screens (mobile swipe is enough) */
+@media (max-width: 768px) {
+  .frames-page .scroll-btn {
+    display: none;
+  }
+}
+
 
 
 
