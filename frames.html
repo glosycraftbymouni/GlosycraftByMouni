@@ -155,6 +155,20 @@ function closePopup() {
   document.getElementById("imagePopup").style.display = "none";
 }
 </script>
+  <script>
+document.querySelectorAll('.frame-scroll-wrapper').forEach(wrapper => {
+  const grid = wrapper.querySelector('.product-grid-new');
+  wrapper.querySelector('.scroll-btn.left')
+    .addEventListener('click', () => {
+      grid.scrollBy({ left: -260, behavior: 'smooth' });
+    });
+
+  wrapper.querySelector('.scroll-btn.right')
+    .addEventListener('click', () => {
+      grid.scrollBy({ left: 260, behavior: 'smooth' });
+    });
+});
+</script>
 
 </body>
 </html>
