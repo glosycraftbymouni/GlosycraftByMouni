@@ -14,22 +14,17 @@
 
   <section class="details-container">
     <div class="details-card">
-      <div class="product-images">
+      <div class="carousel-container">
       <!--  <div class="product-img-box">
           <img src="images/ocean-blue-hamper.jpg" alt="Ocean Blue Gift Box">
         </div> -->
-        <div class="product-img-box">
+        <div class="carousel" id="carousel">
           <img src="images/ocean-item-photoframe.jpeg" alt="4 inch photo frame">
-        </div>
-        <div class="product-img-box">
           <img src="images/ocean-item-keychain.jpeg" alt="Customized keychain">
-        </div>
-        <div class="product-img-box">
           <img src="images//ocean-item-pendant.jpeg" alt="Resin pendant">
-        </div>
-       <div class="product-img-box">
           <img src="images//ocean-item-candle.jpeg" alt="Scented candle">
         </div>
+        <div class="dots" id="dots"></div>
       </div>
 
       <h2>What's Inside</h2>
@@ -55,6 +50,30 @@
   <div class="back-home">
     <a href="hampers.html" class="btn">← Back to Hampers</a>
   </div>
+<script>
+const carousel = document.getElementById("carousel");
+const dotsContainer = document.getElementById("dots");
 
+if (carousel && dotsContainer) {
+  const images = carousel.querySelectorAll("img");
+
+  images.forEach((_, i) => {
+    const dot = document.createElement("span");
+    dot.classList.add("dot");
+    if (i === 0) dot.classList.add("active");
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll(".dot");
+
+  carousel.addEventListener("scroll", () => {
+    const index = Math.round(
+      carousel.scrollLeft / carousel.clientWidth
+    );
+    dots.forEach(d => d.classList.remove("active"));
+    if (dots[index]) dots[index].classList.add("active");
+  });
+}
+</script>
 </body>
 </html>
