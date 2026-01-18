@@ -529,10 +529,14 @@ footer {
 .carousel img {
   width: 100%;
   height: 260px;
+  object-fit: contain;
   flex-shrink: 0;
   scroll-snap-align: center;
   border-radius: 16px;
   background: #fff;
+}
+.carousel img{
+  object-fit: contain !important;
 }
 
 /* dots */
@@ -557,6 +561,7 @@ footer {
   width: 18px;
   border-radius: 10px;
 }
+
 
 
 
