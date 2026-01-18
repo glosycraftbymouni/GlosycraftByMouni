@@ -214,5 +214,30 @@ document.querySelectorAll('.frame-scroll-wrapper').forEach(wrapper => {
      Order on WhatsApp
   </a>
 </div>
+  <script>
+let orderList = [];
+
+function addToOrder(item) {
+  orderList.push(item);
+  document.getElementById("orderPanel").style.display = "block";
+  renderOrder();
+}
+
+function renderOrder() {
+  const box = document.getElementById("orderItems");
+  box.innerHTML = "";
+
+  orderList.forEach((item, i) => {
+    box.innerHTML += <div class="order-item">• ${item}</div>;
+  });
+
+  const text =
+    "Hi Glosycraftbymouni,%0A%0AI want to order:%0A" +
+    orderList.map(i => "- " + i).join("%0A");
+
+  document.getElementById("whatsappOrder").href =
+    "https://wa.me/919110536348?text=" + text;
+}
+</script>
 </body>
 </html>
