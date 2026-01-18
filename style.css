@@ -422,61 +422,91 @@ footer {
     display: none;
   }
 }
-/* ===== Amazon Style Hamper Reveal ===== */
+/* ===== Ocean Blue Hamper Page ===== */
 
-.hamper-reveal-card {
+.details-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.details-card {
   background: #fff;
-  border-radius: 18px;
-  padding: 20px;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
   text-align: center;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
 }
 
-.hamper-reveal-card:hover {
-  transform: translateY(-6px);
+.details-card h2 {
+  color: #e75480;
+  margin-bottom: 12px;
 }
 
-.hamper-box {
-  position: relative;
-  width: 260px;
+.details-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px;
+}
+
+.details-card ul li {
+  margin-bottom: 8px;
+  color: #444;
+  font-size: 16px;
+}
+
+.price {
+  font-weight: bold;
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.product-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.product-img-box {
+  width: 220px;
   height: 220px;
-  margin: 0 auto 15px;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #f7f7f7;
 }
 
-.hamper-box-img {
+.product-img-box img {
   width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 5;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Items inside hamper */
-.hamper-item {
-  position: absolute;
-  bottom: 40px;
-  width: 80px;
-  opacity: 0;
-  transition: all 0.5s ease;
+/* Buttons */
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 18px;
+  background: #ff5a7a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  transition: background 0.3s;
 }
 
-/* Item positions */
-.item1 { left: 10px; }
-.item2 { left: 70px; }
-.item3 { left: 130px; }
-.item4 { left: 190px; }
-
-/* Reveal on hover */
-.hamper-reveal-card:hover .hamper-item {
-  opacity: 1;
-  bottom: 110px;
+.btn:hover {
+  background: #e75480;
 }
 
-/* Mobile tap support */
-.hamper-reveal-card:active .hamper-item {
-  opacity: 1;
-  bottom: 110px;
+/* Back home */
+.back-home {
+  display: block;
+  text-align: center;
+  margin: 30px 0;
 }
 
 
