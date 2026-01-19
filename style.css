@@ -573,8 +573,8 @@ footer {
   width: 90%;
   margin-top: 6px;
 }
-/* ===== GLOBAL FLOAT ORDER BUTTON ===== */
-.global-order-btn {
+/* ===== FLOATING ORDER LIST BUTTON (CORRECT) ===== */
+.order-float-btn {
   position: fixed;
   top: 20px;
   right: 20px;
@@ -590,11 +590,25 @@ footer {
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 
-.global-order-btn:hover {
+.order-float-btn:hover {
   background: #e75480;
 }
 
+/* ===== ORDER PANEL (RIGHT SIDE SLIDE) ===== */
+.order-panel {
+  position: fixed;
+  top: 0;
+  right: -360px;
+  width: 320px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -6px 0 18px rgba(0,0,0,0.25);
+  padding: 15px;
+  z-index: 9998;
+  transition: right 0.35s ease;
+  overflow-y: auto;
+}
 
-
-
-
+.order-panel.open {
+  right: 0;
+}
