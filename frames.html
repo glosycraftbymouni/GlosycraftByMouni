@@ -195,32 +195,6 @@ document.querySelectorAll('.frame-scroll-wrapper').forEach(wrapper => {
     Order on WhatsApp
   </button
 </div>
-  <script>
-let selectedItems = JSON.parse(localStorage.getItem("selectedItems")) || [];
-
-function addItem(item) {
-  selectedItems.push(item);
-  localStorage.setItem("selectedItems", JSON.stringify(selectedItems));
-  alert(item + " added to list");
-}
-
-function orderOnWhatsApp() {
-  if (selectedItems.length === 0) {
-    alert("Please add at least one item");
-    return;
-  }
-
-  let msg = "Hi Glosycraftbymouni 👋\n\nI want to order:\n";
-  selectedItems.forEach((i, idx) => {
-    msg += (idx + 1) + ". " + i + "\n";
-  });
-
-  window.open(
-    "https://wa.me/919110536348?text=" + encodeURIComponent(msg),
-    "_blank"
-  );
-}
-</script>
   <!-- Global Floating Order Button -->
 <!-- Floating Order List Button -->
 <button class="order-float-btn" onclick="toggleOrderPanel()">
