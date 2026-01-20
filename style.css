@@ -591,12 +591,9 @@ footer {
   font-weight: bold;
   cursor: pointer;
 
-  z-index: 99999;          /* VERY IMPORTANT */
-  pointer-events: auto;   /* VERY IMPORTANT */
-
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  z-index: 99999;          /* 🔥 VERY IMPORTANT */
+  pointer-events: auto;   /* 🔥 FORCE CLICK */
 }
-
 .order-float-btn:hover {
   background: #e75480;
 }
@@ -662,13 +659,22 @@ footer {
   z-index: 10001; /* larger than panel*/
 }
 .frame-scroll-wrapper,
-.product-grid-new {
+.product-grid-new,
+.details-container {
   pointer-events: auto;
 }
 
 .scroll-btn {
   pointer-events: auto;
 }
+#imagePopup {
+  pointer-events: none;
+}
+
+#imagePopup.open {
+  pointer-events: auto;
+}
+
 
 
 
