@@ -217,7 +217,12 @@ document.querySelectorAll('.frame-scroll-wrapper').forEach(wrapper => {
     Order on WhatsApp
   </button
 </div>
-  <script>
+  <!-- Global Floating Order Button -->
+<!-- Floating Order List Button -->
+<button class="order-float-btn" onclick="toggleOrderPanel()">
+  🛒 Order List
+</button>
+   <script>
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function toggleOrderPanel() {
@@ -280,10 +285,5 @@ function orderOnWhatsApp() {
   );
 }
 </script>
-  <!-- Global Floating Order Button -->
-<!-- Floating Order List Button -->
-<button class="order-float-btn" onclick="toggleOrderPanel()">
-  🛒 Order List
-</button>
 </body>
 </html>
