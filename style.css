@@ -616,13 +616,6 @@ footer {
   z-index: 9999;
   right: 0;
 }
-.order-item {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
 .order-thumb {
   width: 50px;
   height: 50px;
@@ -640,12 +633,11 @@ footer {
 .order-item img {
   width: 50px;
   height: 50px;
-  min-width: 50px
-  min-height: 50px
+  min-width: 50px;
+  min-height: 50px;
   object-fit: cover;
   border-radius: 6px;
   flex-shrink: 0;/* IMPORTANT */
-  display: block;
 }
 .close-panel {
   position: absolute;
@@ -667,13 +659,10 @@ footer {
 .scroll-btn {
   pointer-events: auto;
 }
-#imagePopup {
-  pointer-events: none;
-}
-
 #imagePopup.open {
   pointer-events: auto;
 }
+
 
 
 
