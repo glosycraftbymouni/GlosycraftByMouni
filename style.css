@@ -590,7 +590,10 @@ footer {
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
-  z-index: 9999;
+
+  z-index: 99999;          /* VERY IMPORTANT */
+  pointer-events: auto;   /* VERY IMPORTANT */
+
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 
@@ -613,6 +616,7 @@ footer {
   overflow-y: auto;
 }
 .order-panel.open {
+  z-index: 9999;
   right: 0;
 }
 .order-item {
@@ -657,6 +661,15 @@ footer {
   cursor: pointer;
   z-index: 10001; /* larger than panel*/
 }
+.frame-scroll-wrapper,
+.product-grid-new {
+  pointer-events: auto;
+}
+
+.scroll-btn {
+  pointer-events: auto;
+}
+
 
 
 
