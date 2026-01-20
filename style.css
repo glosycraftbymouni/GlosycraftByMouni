@@ -662,6 +662,25 @@ footer {
 #imagePopup.open {
   pointer-events: auto;
 }
+/* ===== CART COUNT BADGE ===== */
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #ff2f5f;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
 
 
 
