@@ -226,6 +226,11 @@ document.querySelectorAll('.frame-scroll-wrapper').forEach(wrapper => {
   <script>
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+function toggleOrderPanel() {
+  document.getElementById("orderPanel").classList.toggle("open");
+  renderCart();
+}
+
 function addItem(name, img) {
   const found = cart.find(i => i.name === name);
   if (found) {
@@ -234,12 +239,6 @@ function addItem(name, img) {
     cart.push({ name, img, qty: 1 });
   }
   localStorage.setItem("cart", JSON.stringify(cart));
-  renderCart();
-}
-
-function toggleOrderPanel() {
-  document.getElementById("orderPanel").classList.toggle("open");
-  renderCart();
 }
 
 function renderCart() {
@@ -249,10 +248,10 @@ function renderCart() {
   cart.forEach((item, index) => {
     box.innerHTML += `
       <div class="order-item">
-        <img src="${item.img}">
+        <img src="${item.img}" width="50">
         <div>
           <div>${item.name}</div>
-          <div class="qty-controls">
+          <div>
             <button onclick="changeQty(${index}, -1)">−</button>
             ${item.qty}
             <button onclick="changeQty(${index}, 1)">+</button>
@@ -278,7 +277,7 @@ function orderOnWhatsApp() {
 
   let msg = "Hi Glosycraftbymouni 👋\n\nI want to order:\n";
   cart.forEach((i, idx) => {
-    msg += `${idx+1}. ${i.name} × ${i.qty}\n`;
+    msg += ${idx + 1}. ${i.name} × ${i.qty}\n;
   });
 
   window.open(
@@ -286,6 +285,6 @@ function orderOnWhatsApp() {
     "_blank"
   );
 }
-  </script>
+</script>
 </body>
 </html>
