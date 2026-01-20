@@ -600,10 +600,11 @@ footer {
   top: 0;
   right: 0;
   width: 85%;
-  max-width: 320px;
+  max-width: 360px;
   height: 100vh;
   background: #fff;
-  z-index: 9998;
+  z-index: 10000; /*very important*/
+  box-shadow: -4px 0 20px rgba(0,0,0,0.2);
   overflow-y: auto;
 }
 .order-panel.open {
@@ -642,13 +643,16 @@ footer {
 }
 .close-panel {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background: transparent;
+  top: 12px;
+  right: 12px;
+  background: #fff;
   border: none;
   font-size: 20px;
+  font-weight: bold;
   cursor: pointer;
+  z-index: 10001; /* larger than panel*/
 }
+
 
 
 
