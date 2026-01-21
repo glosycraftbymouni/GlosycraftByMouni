@@ -60,21 +60,21 @@
     <div class="product-img-box">
     <img src="images/6inch-frame-1.jpeg" onclick="openPopup(this.src)">
      </div>
-    <button onclick="addItem('6 inch Resin photo Frame-6 inch design 1', 'images/6inch-frame-1.jpeg')">Add to Cart
+    <button class="add-to-cart-btn" onclick="addItem('6 inch Resin photo Frame-6 inch design 1', 'images/6inch-frame-1.jpeg')">Add to Cart
     </button>
     </div>
    <div class="product-card">
   <div class="product-img-box">
     <img src="images/6inch-frame-1.1.jpeg" onclick="openPopup(this.src)">
   </div>
-   <button onclick="addItem('6 inch Resin photo Frame-6 inch design 2', 'images/6inch-frame-1.1.jpeg')">Add to Cart
+   <button class="add-to-cart-btn" onclick="addItem('6 inch Resin photo Frame-6 inch design 2', 'images/6inch-frame-1.1.jpeg')">Add to Cart
     </button>
      </div>
    <div class="product-card">
     <div class="product-img-box">
     <img src="images/6inch-frame-2.jpg" onclick="openPopup(this.src)">
   </div>
-   <button onclick="addItem('6 inch Resin photo Frame-6 inch design 3', 'images/6inch-frame-2.jpg')">Add to Cart
+   <button class="add-to-cart-btn" onclick="addItem('6 inch Resin photo Frame-6 inch design 3', 'images/6inch-frame-2.jpg')">Add to Cart
     </button>
    </div>
   </div>
@@ -91,21 +91,21 @@
      <div class="product-img-box">
     <img src="images/8inch-frame-1.jpg" onclick="openPopup(this.src)">
      </div>
-       <button onclick="addItem(' 8 inch Resin photo Frame-8 inch design 1', 'images/8inch-frame-1.jpg')">Add to Cart
+       <button class="add-to-cart-btn" onclick="addItem(' 8 inch Resin photo Frame-8 inch design 1', 'images/8inch-frame-1.jpg')">Add to Cart
     </button>
     </div>
     <div class="product-card">
     <div class="product-img-box">
     <img src="images/8inch-frame-1.1.jpg" onclick="openPopup(this.src)">
   </div>
-      <button onclick="addItem('8 inch Resin photo Frame-8 inch design 2', 'images/8inch-frame-1.1.jpg')">Add to Cart
+      <button class="add-to-cart-btn" onclick="addItem('8 inch Resin photo Frame-8 inch design 2', 'images/8inch-frame-1.1.jpg')">Add to Cart
     </button>
       </div>
      <div class="product-card">
     <div class="product-img-box">
     <img src="images/8inch-frame-1.2.jpg" onclick="openPopup(this.src)">
     </div>
-       <button onclick="addItem('8 inch Resin photo Frame-8 inch design 3', 'images/8inch-frame-1.2.jpg')">Add to Cart
+       <button class="add-to-cart-btn" onclick="addItem('8 inch Resin photo Frame-8 inch design 3', 'images/8inch-frame-1.2.jpg')">Add to Cart
     </button>
   </div>
   <button class="scroll-btn right" aria-label="Scroll right">&#10095;</button>
@@ -122,7 +122,7 @@
      <div class="product-img-box">
     <img src="images/placeholder.jpg" onclick="openPopup(this.src)">
   </div>
-       <button onclick="addItem('12 inch Resin photo Frame-12 inch design 1', 'images/placeholder.jpg')">Add to Cart
+       <button class="add-to-cart-btn" onclick="addItem('12 inch Resin photo Frame-12 inch design 1', 'images/placeholder.jpg')">Add to Cart
     </button>
       </div>
     <div class="product-img-box">
@@ -324,6 +324,18 @@ function orderOnWhatsApp() {
 }
      updateCartBadge(); // page load
 </script>
+  <script>
+function handleAddToCart(btn, name, img) {
+  btn.classList.add("clicked");   // visual feedback
+
+  addItem(name, img);             // your existing cart logic
+
+  setTimeout(() => {
+    btn.classList.remove("clicked");
+  }, 150);
+}
+</script>
+
   <!-- Global Floating Order Button -->
 <!-- Floating Order List Button -->
 <button class="order-float-btn" onclick="toggleOrderPanel()">
