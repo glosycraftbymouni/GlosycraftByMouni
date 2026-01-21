@@ -337,9 +337,12 @@ function orderOnWhatsApp() {
   }, 150); 
 updateCartBadge();
 }
-     
+document.addEventListener("DOMContentLoaded", () => {
+  renderCart();
+  updateCartBadge();
+});   
 </script>
-
+  
   <!-- Global Floating Order Button -->
 <!-- Floating Order List Button -->
 <button class="order-float-btn" onclick="toggleOrderPanel()">
